@@ -1,0 +1,24 @@
+name: AdvancedStructures
+main: com.antarescraft.kloudy.advancedstructures.AdvancedStructures
+version: 1.0
+author: Kloudy
+website: www.antarescraft.com
+
+depend: [ProtocolLib, WonderHUDAPI]
+
+commands:
+  structure:
+    description: used to define commands for the WonderHUD plugin
+
+permissions:
+  structure.*:
+    description: Gives access to all WonderHUD commands and features
+    children:
+      structure.admin: true
+      structure.use: true
+  structure.admin:
+    description: Gives access to all AdvancedStructures admin commands
+    default: op
+  structure.use:
+    description: Gives access to all basic (non-admin) AdvancedStructures commands
+    default: true
